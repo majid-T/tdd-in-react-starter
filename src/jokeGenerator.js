@@ -24,7 +24,7 @@ export default class JokeGenerator extends Component {
 
     return (
       <Fragment>
-        {!joke && <div>You havent loaded any jokes yet</div>}
+        {!joke && !loading && <div>You havent loaded any jokes yet</div>}
         {loading && <div>Loading...</div>}
         {joke && !loading && <Joke text={joke} />}
 

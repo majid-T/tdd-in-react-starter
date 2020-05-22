@@ -33,6 +33,6 @@ test("JokeGenerator component fetches a random joke and renders it", async () =>
   expect(getByText("You havent loaded any jokes yet")).toBeInTheDOM();
 
   Simulate.click(getByText("Load a random joke"));
-  //   expect(queryByText("You havent loaded any jokes yet")).not.toBeInTheDOM();
+  expect(queryByText("You havent loaded any jokes yet")).not.toBeInTheDOM();
   expect(queryByText("Loading...")).toBeInTheDOM();
 });
