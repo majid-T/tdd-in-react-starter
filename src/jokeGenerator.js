@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import axios from "axios";
+import Joke from "./joke";
 
 export default class JokeGenerator extends Component {
   state = {

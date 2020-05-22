@@ -29,12 +29,10 @@ test("JokeGenerator component fetches a random joke and renders it", async () =>
   const { getByText, queryByText, queryByTestId } = render(<JokeGenerator />);
 
   await wait(() => expect(queryByText("Loading...")).not.toBeInTheDOM());
-  expect(queryByTestId("joke-test")).toBeInTheDOM();
-
+  //   expect(queryByTestId("joke-text")).toBeInTheDOM();
   expect(getByText("You havent loaded any jokes yet")).toBeInTheDOM();
 
   Simulate.click(getByText("Load a random joke"));
-
   //   expect(queryByText("You havent loaded any jokes yet")).not.toBeInTheDOM();
   expect(queryByText("Loading...")).toBeInTheDOM();
 });

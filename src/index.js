@@ -1,8 +1,14 @@
-import react from "react";
+import React from "react";
+import ReactDOM from "react-dom";
+
 import JokeGenerator from "./jokeGenerator";
 
-const app = () => {
-  <div>
-    <JokeGenerator />
-  </div>;
+const App = () => {
+  return (
+    <div>
+      <JokeGenerator />
+    </div>
+  );
 };
+
+ReactDOM.render(<App />, document.getElementById("root"));
